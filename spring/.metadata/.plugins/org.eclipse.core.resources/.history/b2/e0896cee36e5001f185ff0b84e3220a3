@@ -1,0 +1,18 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestOrder1 {
+    public static void main(String[] args) {
+        // Load the Spring configuration file
+        ApplicationContext context = new ClassPathXmlApplicationContext("Order.xml");
+
+        // Retrieve the bean
+        Order order = (Order) context.getBean("order");
+
+        // Call the method
+        order.bookATicket(5);
+
+        // Close the context to release resources
+        ((ClassPathXmlApplicationContext) context).close();
+    }
+}

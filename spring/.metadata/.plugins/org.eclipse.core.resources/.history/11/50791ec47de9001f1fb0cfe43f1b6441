@@ -1,0 +1,25 @@
+package com.rays.dao;
+
+import com.rays.dto.UserDTO;
+
+public interface UserDaoInt {
+
+	
+	public long  add(UserDTO dto);
+	
+	public long  update(UserDTO dto);
+
+	public long  delete(long  id);
+	 	
+	public UserDTO findByLogin( String login) ;
+	
+	public UserDTO authenticate( String login,String password) ;
+	
+	
+	public UserDTO findByPK( long pk) ;
+
+		
+	
+	
+	
+}

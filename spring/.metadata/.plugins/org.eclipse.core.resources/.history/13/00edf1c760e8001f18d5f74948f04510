@@ -1,0 +1,6 @@
+package com.rays.primary;
+
+public class TwitterService implements MessageService{
+	
+
+}

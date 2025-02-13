@@ -1,0 +1,9 @@
+package com.rays.springcore;
+
+public class TestMultiple {
+	private void mai() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

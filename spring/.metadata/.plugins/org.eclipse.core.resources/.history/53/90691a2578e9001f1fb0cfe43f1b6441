@@ -1,0 +1,10 @@
+package com.rays.dao;
+
+import javax.swing.tree.RowMapper;
+
+import com.rays.dto.UserDTO;
+
+public class UserMapper implements org.springframework.jdbc.core.RowMapper<UserDTO>{
+	
+
+}

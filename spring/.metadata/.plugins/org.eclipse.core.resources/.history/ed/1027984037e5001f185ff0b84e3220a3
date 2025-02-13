@@ -1,0 +1,15 @@
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+
+public class TestOrder {
+	public static void main(String[] args) {
+
+		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("Order.xml"));
+
+		Order order = (Order) factory.getBean("Order");
+
+		order.bookATicket(5);
+
+	}
+}

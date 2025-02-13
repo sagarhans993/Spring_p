@@ -1,0 +1,14 @@
+ import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestOrder1 {
+	public static void main(String[] args) {
+		
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("Order.xml");
+		
+ 		Order order= (Order) context.getBean("Order");
+ 		
+ 		order.bookATicket(5);
+
+}
+}

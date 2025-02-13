@@ -1,0 +1,37 @@
+package ioc;
+
+public class Order {
+	
+	private Peyment peyment;
+	private Inventory inventory;
+	public Peyment getPeyment() {
+		return peyment;
+	}
+	public void setPeyment(Peyment peyment) {
+		this.peyment = peyment;
+	}
+	public Inventory getInventory() {
+		return inventory;
+	}
+	public void setInventory(Inventory inventory) {
+		this.inventory = inventory;
+	}
+	
+
+	public void bookATicket(int items) {
+
+		int price = 10;
+
+		double totalAmount = items * price;
+
+		double updatedBalance = peyment.makePayment(totalAmount);
+
+		int updatedStock = inventory.sold(items);
+
+		System.out.println("Tickets are Booked");
+		System.out.println("Total Amount Paid: " + totalAmount);
+		System.out.println("Remaining Balance: " + updatedBalance);
+		System.out.println("Updated Stock: " + updatedStock);
+	}
+
+}

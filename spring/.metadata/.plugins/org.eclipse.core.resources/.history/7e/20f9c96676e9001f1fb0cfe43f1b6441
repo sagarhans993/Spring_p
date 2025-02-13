@@ -1,0 +1,27 @@
+package com.rays.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.rays.dto.UserDto;
+
+public class UserDaoJDBCImpl {
+	
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	private void setDataSource(DataSource datasource) {
+     this.jdbcTemplate = new JdbcTemplate();
+	}
+	
+	public long  add( UserDto dto) {
+		String sql = 	"insert into user values(?,?,?,?,?)";
+		
+		jdbcTemplate.update(sql,dto.getFristname(),dto.getLastname(),dto.getLoginid(),dto.getPassword(),dto.getId())
+		return 0;
+		
+		
+	}
+
+}

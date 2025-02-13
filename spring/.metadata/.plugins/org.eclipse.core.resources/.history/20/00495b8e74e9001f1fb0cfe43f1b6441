@@ -1,0 +1,18 @@
+package com.rays.dto;
+
+import org.springframework.context.annotation.EnableLoadTimeWeaving;
+
+
+public class UserDto {
+	
+	private Long id;
+	private String username ;
+	private String loginid;
+	private String password;
+	
+	
+	
+	
+	
+
+}

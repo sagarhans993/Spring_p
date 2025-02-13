@@ -1,0 +1,16 @@
+package com.rays.springcore;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+
+public class TestMultiple {
+public static void main(String[] args) {
+	
+	BeanFactory  factory =new XmlBeanFactory(new ClassPathResource("Multiple.xml"));
+	
+	factory.getBean('User");
+	
+}
+
+}

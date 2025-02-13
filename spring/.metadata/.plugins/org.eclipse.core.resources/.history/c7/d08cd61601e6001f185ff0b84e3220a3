@@ -1,0 +1,10 @@
+package ioc;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Payment {
+@Value (value = "100")
+	double balance =0;
+
+}
+

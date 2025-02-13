@@ -1,0 +1,12 @@
+package com.rays.autowire.notype;
+
+public class UserDaoImp implements UserDao{
+
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

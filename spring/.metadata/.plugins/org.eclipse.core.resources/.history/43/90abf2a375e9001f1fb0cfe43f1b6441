@@ -1,0 +1,15 @@
+package com.rays.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class UserDaoJDBCImpl {
+	
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	private void setDataSource(DataSource datasource) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,7 @@
+package ioc;
+
+public class Snippet {
+	ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"UserBean.xml", "Person.xml" });
+	
+}
+

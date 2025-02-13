@@ -1,0 +1,9 @@
+package ioc;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Peyment {
+
+	@Value(value = "100")
+	int balance = 0;
+}

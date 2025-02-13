@@ -1,0 +1,11 @@
+package com.rays.dao;
+
+import com.rays.dto.UserDTO;
+
+public interface UserDaoInt {
+
+	
+	public long  add(UserDTO dto) {
+		
+	}
+}

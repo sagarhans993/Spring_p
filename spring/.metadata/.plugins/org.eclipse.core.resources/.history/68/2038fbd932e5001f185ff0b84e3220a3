@@ -1,0 +1,27 @@
+package ioc;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Peyment {
+
+	@Value(value = "100")
+	int balance = 0;
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	public double makePayment(double amt) {
+		balance = balance - amt;
+		return balance;
+	}
+
+	public double diposit(double amt) {
+		balance = balance + amt;
+		return balance;
+	}
+
+}

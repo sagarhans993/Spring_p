@@ -1,0 +1,13 @@
+package exclude;
+public class TestExcludeAutomatically {
+
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("exclude.xml");
+
+		TestAutowire testAutowire = context.getBean(TestAutowire.class);
+		
+		testAutowire.performOperations();
+	}
+
+}

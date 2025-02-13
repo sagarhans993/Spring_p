@@ -1,0 +1,9 @@
+package springcore;
+
+public class UserBean {
+	
+	
+	private String login;
+    private String password;
+    
+}

@@ -1,18 +1,39 @@
 package com.rays.dto;
 
-import org.springframework.context.annotation.EnableLoadTimeWeaving;
+ import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="UserAOP")
 public class UserDTO {
+	
+	
+	@Id
+	@GeneratedValue(generator = "ncspk")
+	@GenericGenerator(name = "ncspk",strategy = "native")
+	@Column(name ="ID",unique = true ,nullable = false)
+	protected long id=0;
 
-	private Long id;
-	private String fristname;
+	
+	
+	@Column(name = "FIRST_NAME" ,length= 50)
+	private String firstname;
+	
+	@Column(name = "LAST_NAME" ,length= 50)
 	private String lastname;
-	private String loginid;
+	
+	@Column(name = "LOGIN" ,length= 50)
+	private String login;
+	
+	@Column(name = "PASSWORD" ,length= 50)
 	private String password;
 
-	 
-
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -20,12 +41,12 @@ public class UserDTO {
 		this.id = id;
 	}
 
-	public String getFristname() {
-		return fristname;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFristname(String fristname) {
-		this.fristname = fristname;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getLastname() {
@@ -36,12 +57,12 @@ public class UserDTO {
 		this.lastname = lastname;
 	}
 
-	public String getLoginid() {
-		return loginid;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setLoginid(String loginid) {
-		this.loginid = loginid;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getPassword() {
@@ -51,5 +72,11 @@ public class UserDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
+	
+	
+	
+	
+	
+	 
 }
